@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #e6f2f2;
+        }
+
+        .custom-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control[readonly] {
+            background-color: #e9ecef;
+            border: none;
+        }
+
+        .table-bordered td, .table-bordered th {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .table-header {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        .custom-btn {
+            width: 100px;
+        }
+
+        .custom-label {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .row > .col-md-2, .row > .col-md-4, .row > .col-md-6 {
+            padding-bottom: 10px;
+        }
+
+        textarea.form-control {
+            height: 60px;
+        }
+
+        .custom-container h5 {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">الخدمات الإلكترونية لوزارة المالية</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">الطلبات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">القوائم</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">الإعدادات</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="بحث" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mt-4">
+        <h6 class="text-primary">الرئيسية / <span class="text-secondary">بيانات الطلب</span></h6>
+    </div>
+
+    <div class="container custom-container mt-4">
+        <h5 class="text-primary mb-4">بيانات الطلب رقم <span class="text-secondary">23158</span></h5>
+        <h5 class="text-primary mb-4">بيانات الموظف</h5>
+
+        <!-- Employee Data Section -->
+        <div class="row mb-3">
+            <div class="col-md-9">
+                <label class="custom-label">الاسم</label>
+                <input type="text" class="form-control" value="حمد حسين أبراهيم" readonly>
+            </div>
+            <div class="col-md-3">
+                <label class="custom-label">الرقم المدني</label>
+                <input type="text" class="form-control" value="2821547285487" readonly>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label class="custom-label">المسمى الوظيفي</label>
+                <input type="text" class="form-control" value="مراقب مالي" readonly>
+            </div>
+            <div class="col-md-4">
+                <label class="custom-label">الوحدة التنظيمية</label>
+                <input type="text" class="form-control" value="إدارة الخضوع الضريبي" readonly>
+            </div>
+            <div class="col-md-4">
+                <label class="custom-label">الجنسية</label>
+                <input type="text" class="form-control" value="كويتي" readonly>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label class="custom-label">تاريخ بداية العقد</label>
+                <input type="text" class="form-control" value="25/02/2020" readonly>
+            </div>
+            <div class="col-md-4">
+                <label class="custom-label">تاريخ الانضمام إلى العمل</label>
+                <input type="text" class="form-control" value="25/05/2026" readonly>
+            </div>
+            <div class="col-md-4">
+                <label class="custom-label">الهاتف</label>
+                <input type="text" class="form-control" value="800800800" readonly>
+            </div>
+        </div>
+
+        <div class="row mb-12">
+            <label class="col-md-2 custom-label">ملاحظات</label>
+            <div class="col-md-12">
+                <textarea class="form-control" rows="4" readonly></textarea>
+            </div>
+        </div>
+
+        <!-- Request Details Section -->
+        <h5 class="text-primary mt-5 mb-4">تفاصيل الطلب</h5>
+        <table class="table table-bordered text-center">
+            <thead class="table-header">
+                <tr>
+                    <th>نوع البيان</th>
+                    <th>النوع</th>
+                    <th>تاريخ تقديم الطلب</th>
+                    <th>المسؤول</th>
+                    <th>مرفق البطاقة المدنية</th>
+                    <th>صورة المطالبة</th>
+                    <th>حالة الطلب</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>السجل الضريبي</td>
+                    <td>وثائق</td>
+                    <td>22/11/2023</td>
+                    <td>mof/Eman</td>
+                    <td><button class="btn btn-outline-primary">عرض المرفق</button></td>
+                    <td><button class="btn btn-outline-primary">عرض المرفق</button></td>
+                    <td>جاري العمل</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Buttons Section -->
+        <div class="text-center mt-3">
+            <button class="btn btn-primary custom-btn">تخصيص</button>
+            <button class="btn btn-outline-primary custom-btn">انتظار</button>
+            <button class="btn btn-outline-danger custom-btn">رفض</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
